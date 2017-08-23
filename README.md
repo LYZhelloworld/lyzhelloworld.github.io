@@ -1,2 +1,3 @@
 # lyzhelloworld.github.io
-Website
+----
+See http://lyzhelloworld.github.io for preview.
