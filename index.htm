@@ -7,39 +7,70 @@
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="img-fadein.css" />
 		<style>
+		.avatar {
+			width: 100%;
+			max-width: 200px;
+			height: auto;
+			margin: 0 auto;
+			display: block;
+			border-radius: 50%;
+			border: 5px solid #fff;
+		}
 		</style>
 	</head>
-	<body>
-		<nav class="mainnav navbar navbar-toggleable-md navbar-inverse bg-primary">
-			<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<a class="navbar-brand" href="https://github.com/LYZhelloworld/lyzhelloworld.github.io" target="_blank">lyzhelloworld.github.io</a>
+	<body class="bg-primary">
+		<nav class="mainnav navbar navbar-toggleable-md bg-faded">
+			<div class="container">
+				<div class="navbar-light">
+					<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</div>
+				<a class="navbar-brand" href="https://github.com/LYZhelloworld/lyzhelloworld.github.io" target="_blank">lyzhelloworld.github.io</a>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="/">Portal <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Projects</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Statistics</a>
-					</li>
-				</ul>
-				<div>
-					<!-- Place this tag where you want the button to render. -->
-					<a class="btn btn-outline-success" href="https://github.com/LYZhelloworld" target="_blank" aria-label="Follow @LYZhelloworld on GitHub">Follow @LYZhelloworld</a>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<!-- Template: Navbar -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item active">
+							<a class="nav-link" href="index.htm">Portal <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link disabled" href="#">Statistics</a>
+						</li>
+					</ul>
+					<!-- Template-end: Navbar -->
+					<div>
+						<a class="btn btn-outline-success" href="https://github.com/LYZhelloworld" target="_blank" aria-label="Follow @LYZhelloworld on GitHub">Follow @LYZhelloworld</a>
+					</div>
 				</div>
 			</div>
 		</nav>
+
+		<div class="main container text-white text-center mt-5">
+			<div class="row">
+				<div class="col-sm-12">
+					<img class="avatar" src="avatar.png" />
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-sm-12">
+					<h2 class="mb-4">Helloworld</h2>
+					<button class="btn btn-info" href="https://twitter.com/sshelloworld" target="_blank">View in Twitter</button>
+					<button class="btn btn-success" href="https://github.com/LYZhelloworld" target="_blank">View in GitHub</button>
+				</div>
+			</div>
+		</div>
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script src="img-fadein.js"></script>
 	</body>
 </html>
