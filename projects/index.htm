@@ -64,7 +64,7 @@
 		<script src="../img-fadein.js"></script>
 		<script>
 		jQuery(document).ready(function($) {
-			var converter = new showdown.Converter({'strikethrough':true});
+			var converter = new showdown.Converter({'strikethrough':true, 'simpleLineBreaks':true});
 			// Load items
 			$.getJSON('projects.json', function(data) {
 				$('.items').html('');
