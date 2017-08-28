@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<title>Helloworld - Statistics</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../img-fadein.css" />
+		<style>
+		.main a {
+			color: white;
+		}
+
+		.fa.title-icon {
+			font-size: 5em;
+			display: block;
+			text-align: center;
+
+		}
+		</style>
+	</head>
+	<body class="bg-primary">
+		<nav class="mainnav navbar navbar-toggleable-md navbar-light bg-faded">
+			<div class="container">
+				<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<a class="navbar-brand text-primary" href="https://github.com/LYZhelloworld/lyzhelloworld.github.io" target="_blank">lyzhelloworld.github.io</a>
+
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<!-- Template: Navbar -->
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="../">Portal</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="../projects/">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Statistics <span class="sr-only">(current)</span></a>
+						</li>
+					</ul>
+					<!-- Template-end: Navbar -->
+				</div>
+			</div>
+		</nav>
+
+		<div class="main container text-white mt-5">
+			<div class="items row">
+			</div>
+		</div>
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.3/showdown.min.js"></script>
+		<script src="../img-fadein.js"></script>
+		<script>
+		jQuery(document).ready(function($) {
+			var converter = new showdown.Converter({'strikethrough':true, 'simpleLineBreaks':true});
+			// Load items
+			$.getJSON('statistics.json', function(data) {
+				$('.items').html('');
+				data.forEach(function(item, index) {
+					$('<div class="col-lg-4 col-md-6 col-sm-12" />').append(
+						$('<i/>').addClass('title-icon').addClass('fa').addClass('fa-' + item.icon).addClass('mb-3').attr('aria-hidden', 'true')
+					).append(
+						$('<h3/>').append($('<a/>').attr('href', item.link).html(converter.makeHtml(item.title)))
+					).append(
+						converter.makeHtml(item.content)
+					).appendTo('.items');
+				});
+			});
+		});
+		</script>
+
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-105309723-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
+	</body>
+</html>
