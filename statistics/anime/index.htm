@@ -42,7 +42,7 @@
 
 		<div class="main container mt-5">
 			<h1>Anime Progress</h1>
-			<div class="row">
+			<div class="items row">
 				<div class="col-lg-4 col-md-12">Sample Title</div>
 				<div class="col-lg-8 col-md-12">
 					<div class="progress">
@@ -57,27 +57,42 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.7.3/showdown.min.js"></script>
 		<script src="../../img-fadein.js"></script>
 		<script>
-		/*
 		jQuery(document).ready(function($) {
 			var converter = new showdown.Converter({'strikethrough':true, 'simpleLineBreaks':true});
 			// Load items
 			$.getJSON('statistics.json', function(data) {
 				$('.items').html('');
+				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
-					$('<div class="col-lg-4 col-md-6 col-sm-12" />').append(
-						$('<i/>').addClass('title-icon').addClass('fa').addClass('fa-' + item.icon).addClass('mb-3').attr('aria-hidden', 'true')
-					).append(
-						$('<h3/>').append($('<a/>').attr('href', item.link).html(converter.makeHtml(item.title)))
-					).append(
-						converter.makeHtml(item.content)
-					).appendTo('.items');
+					$('<div class="col-lg-4 col-md-12" />').html(item.title).appendTo('.items');
+
+					max_to_show = item.max ? item.max : (item.status == 'completed' || item.status == 'abandoned') ? item.value : item.value + 1;
+					progressbar = $('<div class="progress-bar progress-bar progress-bar-striped" role="progressbar" />')
+						.attr('aria-valuenow', item.value)
+						.attr('aria-valuemin', 0)
+						.attr('aria-valuemax', max_to_show)
+						.css('width', item.value / max_to_show * 100 + "%");
+					switch(item.status) {
+						case 'completed':
+							progressbar.addClass('bg-success');
+							progressbar.text(item.value + '/' + max_to_show);
+							break;
+						case 'abandoned':
+							progressbar.addClass('bg-danger');
+							progressbar.text(item.value + '/' + max_to_show);
+							break;
+						case 'in-progress':
+						default:
+							progressbar.addClass('progress-bar-animated');
+							progressbar.text(item.value + (item.max ? '/' + item.max : ''));
+					}
+
+					$('<div class="col=lg-8 col-md-12" />').append($('<div class="progress" />').append(progressbar)).appendTo('.items');
 				});
 			});
 		});
-		*/
 		</script>
 
 		<script>
