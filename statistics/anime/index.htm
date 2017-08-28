@@ -61,7 +61,7 @@
 		<script>
 		jQuery(document).ready(function($) {
 			// Load items
-			$.getJSON('statistics.json', function(data) {
+			$.getJSON('anime.json', function(data) {
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
