@@ -65,7 +65,7 @@
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
-					$('<div class="col-lg-4 col-md-12" />').html(item.title).appendTo('.items');
+					$('<div class="col-lg-4 col-md-6 col-sm-12" />').html(item.title).appendTo('.items');
 
 					max_to_show = item.max ? item.max : (item.status == 'completed' || item.status == 'abandoned') ? item.value : item.value + 1;
 					progressbar = $('<div class="progress-bar progress-bar progress-bar-striped" role="progressbar" />')
@@ -88,7 +88,7 @@
 							progressbar.text(item.value + (item.max ? '/' + item.max : ''));
 					}
 
-					$('<div class="col=lg-8 col-md-12" />').append($('<div class="progress" />').append(progressbar)).appendTo('.items');
+					$('<div class="col-lg-8 col-md-6 col-sm-12" />').append($('<div class="progress" />').append(progressbar)).appendTo('.items');
 				});
 			});
 		});
