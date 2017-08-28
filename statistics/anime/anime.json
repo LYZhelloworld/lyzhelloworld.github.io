@@ -590,8 +590,8 @@
 	{
 		"title":"Fate/Grand Order",
 		"value":1,
-		"max":1,
-		"status":"completed"
+		"max":null,
+		"status":"in-progress"
 	},
 	{
 		"title":"Fate/Apocrypha",
