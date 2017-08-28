@@ -41,7 +41,6 @@
 		</nav>
 
 		<div class="main container mt-5">
-			<h1>Anime Progress</h1>
 			<div class="items row">
 				<div class="col-lg-4 col-md-12">Sample Title</div>
 				<div class="col-lg-8 col-md-12">
@@ -65,10 +64,10 @@
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
-					$('<div class="col-lg-4 col-md-6 col-sm-12" />').html(item.title).appendTo('.items');
+					$('<div class="col-lg-4 col-md-6 col-sm-12 text-lg-right text-md-right text-sm-left" />').html(item.title).appendTo('.items');
 
-					max_to_show = item.max ? item.max : (item.status == 'completed' || item.status == 'abandoned') ? item.value : item.value + 1;
-					progressbar = $('<div class="progress-bar progress-bar progress-bar-striped" role="progressbar" />')
+					max_to_show = item.max ? item.max : item.value;
+					progressbar = $('<div class="progress-bar progress-bar" role="progressbar" />')
 						.attr('aria-valuenow', item.value)
 						.attr('aria-valuemin', 0)
 						.attr('aria-valuemax', max_to_show)
@@ -85,6 +84,7 @@
 						case 'in-progress':
 						default:
 							progressbar.addClass('progress-bar-animated');
+							progressbar.addClass('progress-bar-striped');
 							progressbar.text(item.value + (item.max ? '/' + item.max : ''));
 					}
 
