@@ -607,14 +607,20 @@
 	},
 	{
 		"title":"New Game",
+		"value":17,
+		"max":22,
+		"status":"in-progress"
+	},
+	{
+		"title":"Fate/Zero",
 		"value":5,
 		"max":24,
 		"status":"in-progress"
 	},
 	{
-		"title":"Fate/Zero",
-		"value":3,
-		"max":24,
-		"status":"in-progress"
+		"title":"けものフレンズ",
+		"value":12,
+		"max":12,
+		"status":"completed"
 	}
 ]
