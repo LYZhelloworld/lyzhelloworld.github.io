@@ -607,8 +607,8 @@
 	},
 	{
 		"title":"New Game",
-		"value":17,
-		"max":22,
+		"value":23,
+		"max":23,
 		"status":"in-progress"
 	},
 	{
