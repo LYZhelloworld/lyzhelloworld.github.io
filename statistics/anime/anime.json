@@ -607,8 +607,14 @@
 	},
 	{
 		"title":"New Game",
-		"value":23,
-		"max":23,
+		"value":12,
+		"max":12,
+		"status":"in-progress"
+	},
+	{
+		"title":"New Game II",
+		"value":11,
+		"max":11,
 		"status":"in-progress"
 	},
 	{
