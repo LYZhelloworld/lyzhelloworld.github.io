@@ -609,13 +609,13 @@
 		"title":"New Game",
 		"value":12,
 		"max":12,
-		"status":"in-progress"
+		"status":"completed"
 	},
 	{
 		"title":"New Game II",
-		"value":11,
-		"max":11,
-		"status":"in-progress"
+		"value":12,
+		"max":12,
+		"status":"completed"
 	},
 	{
 		"title":"Fate/Zero",
