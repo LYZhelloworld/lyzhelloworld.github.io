@@ -591,13 +591,13 @@
 		"title":"Fate/Grand Order",
 		"value":1,
 		"max":null,
-		"status":"in-progress"
+		"status":"completed"
 	},
 	{
 		"title":"Fate/Apocrypha",
-		"value":12,
+		"value":13,
 		"max":null,
-		"status":"in-progress"
+		"status":"abandoned"
 	},
 	{
 		"title":"エロマンガ先生",
@@ -621,7 +621,7 @@
 		"title":"Fate/Zero",
 		"value":5,
 		"max":24,
-		"status":"in-progress"
+		"status":"abandoned"
 	},
 	{
 		"title":"けものフレンズ",
