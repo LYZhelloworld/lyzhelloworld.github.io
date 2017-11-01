@@ -63,7 +63,7 @@
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
 					target = '.items' + (item.status == 'in-progress' ? '.in-progress' : item.status == 'completed' ? '.completed' : '.abandoned');
-					$('<div class="col-lg-4 col-md-6 col-sm-12 text-lg-right text-md-right text-sm-left" />').html(item.title).appendTo(target);
+					$('<div class="col-lg-8 col-md-6 col-sm-12 text-lg-right text-md-right text-sm-left" />').html(item.title).appendTo(target);
 
 					max_to_show = item.max ? item.max : item.value;
 					progressbar = $('<div class="progress-bar progress-bar" role="progressbar" />')
@@ -87,7 +87,7 @@
 							progressbar.text(item.value + (item.max ? '/' + item.max : ''));
 					}
 
-					$('<div class="col-lg-8 col-md-6 col-sm-12" />').append($('<div class="progress" />').append(progressbar)).appendTo(target);
+					$('<div class="col-lg-4 col-md-6 col-sm-12" />').append($('<div class="progress" />').append(progressbar)).appendTo(target);
 				});
 			});
 		});
