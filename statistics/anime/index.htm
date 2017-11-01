@@ -87,6 +87,7 @@
 							.text(item.value + '/' + (item.max ? item.max : item.value))
 					).appendTo(target);
 				});
+				console.log(counts);
 				Object.keys(counts).forEach(function(item, index) {
 					if(counts[item] == 0) {
 						$(targets[item]).siblings('text-muted').show();
