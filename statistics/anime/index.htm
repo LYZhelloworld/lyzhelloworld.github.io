@@ -46,16 +46,19 @@
 					<h2>In-progress</h2>
 					<ul class="items in-progress list-group">
 					</ul>
+					<div class="text-muted" style="display: none">Nothing found here.</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<h2>Completed</h2>
 					<ul class="items completed list-group">
 					</ul>
+					<div class="text-muted" style="display: none">Nothing found here.</div>
 				</div>
 				<div class="col-md-6 col-sm-12">
 					<h2>Abandoned</h2>
 					<ul class="items abandoned list-group">
 					</ul>
+					<div class="text-muted" style="display: none">Nothing found here.</div>
 				</div>
 			</div>
 		</div>
@@ -72,13 +75,22 @@
 			$.getJSON('anime.json', function(data) {
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
+				var counts = {'in-progress':0, 'completed':0, 'abandoned':0};
+				var targets = {'in-progress':'.in-progress', 'completed':'.completed', 'abandoned':'.abandoned'};
+				var badges = {'in-progress':'badge-primary', 'completed':'badge-success', 'abandoned':'badge-danger'}
 				data.forEach(function(item, index) {
-					target = '.items' + (item.status == 'in-progress' ? '.in-progress' : item.status == 'completed' ? '.completed' : '.abandoned');
+					target = '.items' + targets[item.status];
+					counts[item.status]++;
 					$('<div class="list-group-item justify-content-between" />').html(item.title).append(
 						$('<span class="badge badge-pill"/>')
-							.addClass(item.status == 'in-progress' ? 'badge-primary' : item.status == 'completed' ? 'badge-success' : 'badge-danger')
+							.addClass(badges[item.status])
 							.text(item.value + '/' + (item.max ? item.max : item.value))
 					).appendTo(target);
+				});
+				Object.keys(counts).forEach(function(item, index) {
+					if(counts[item] == 0) {
+						$(targets[item]).siblings('text-muted').show();
+					}
 				});
 			});
 		});
