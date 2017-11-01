@@ -41,7 +41,11 @@
 		</nav>
 
 		<div class="main container mt-5">
-			<div class="items row">
+			<div class="items in-progress row">
+			</div>
+			<div class="items completed row">
+			</div>
+			<div class="items abandoned row">
 			</div>
 		</div>
 
@@ -58,7 +62,8 @@
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
-					$('<div class="col-lg-4 col-md-6 col-sm-12 text-lg-right text-md-right text-sm-left" />').html(item.title).appendTo('.items');
+					target = '.items' + (item.status == 'in-progress' ? '.in-progress' : item.status == 'completed' ? '.completed' : '.abandoned');
+					$('<div class="col-lg-4 col-md-6 col-sm-12 text-lg-right text-md-right text-sm-left" />').html(item.title).appendTo(target);
 
 					max_to_show = item.max ? item.max : item.value;
 					progressbar = $('<div class="progress-bar progress-bar" role="progressbar" />')
@@ -82,7 +87,7 @@
 							progressbar.text(item.value + (item.max ? '/' + item.max : ''));
 					}
 
-					$('<div class="col-lg-8 col-md-6 col-sm-12" />').append($('<div class="progress" />').append(progressbar)).appendTo('.items');
+					$('<div class="col-lg-8 col-md-6 col-sm-12" />').append($('<div class="progress" />').append(progressbar)).appendTo(target);
 				});
 			});
 		});
