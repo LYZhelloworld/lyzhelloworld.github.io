@@ -56,9 +56,13 @@
 		jQuery(document).ready(function($) {
 			// Load items
 			$.getJSON('countdown.json', function(data) {
+				today = moment();
+				var diffText, diff;
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
+					diff = today.diff(moment(item.date), 'days'); // Difference in days
+					diffText = diff + ' day' + (diff > 1 ? 's' : '');
 					$('.items').append(
 						$('<li>').addClass('list-group-item')
 							.addClass('justify-content-between')
@@ -66,7 +70,7 @@
 								$('<h5>').text(item.title)
 							).append(
 								$('<small>').addClass('text-muted')
-									.text(moment(item.date).fromNow()) // Difference in days
+									.text(diffText)
 							)
 					);
 				});
