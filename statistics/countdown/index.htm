@@ -62,7 +62,13 @@
 				data.reverse(); // Put most recent at top
 				data.forEach(function(item, index) {
 					diff = today.diff(moment(item.date), 'days'); // Difference in days
-					diffText = diff + ' day' + (diff > 1 ? 's' : '');
+					if(diff < 1 && diff > -1) { // present
+						diffText = 'Today';
+					}	else if(diff > 0) { // past
+						diffText = diff + ' day' + (diff > 1 ? 's' : '') + ' ago';
+					} else { // future
+						diffText = 'in ' + diff + ' day' + (diff > 1 ? 's' : '');
+					}
 					$('.items').append(
 						$('<li>').addClass('list-group-item')
 							.addClass('justify-content-between')
