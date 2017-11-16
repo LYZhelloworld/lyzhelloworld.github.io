@@ -4,7 +4,7 @@
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<title>Helloworld - Statistics - Anime Progress</title>
+		<title>Helloworld - Statistics - Countdown</title>
 
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
@@ -41,29 +41,8 @@
 		</nav>
 
 		<div class="main container mt-5">
-			<div class="row">
-				<div class="col-sm-12">
-					<h2>In-progress</h2>
-					<ul class="items in-progress list-group">
-					</ul>
-					<div class="text-muted" style="display: none">Nothing found here.</div>
-				</div>
-			</div>
-			<hr class="hidden-sm-down"/>
-			<div class="row">
-				<div class="col-md-6 col-sm-12">
-					<h2>Completed</h2>
-					<ul class="items completed list-group">
-					</ul>
-					<div class="text-muted" style="display: none">Nothing found here.</div>
-				</div>
-				<div class="col-md-6 col-sm-12">
-					<h2>Abandoned</h2>
-					<ul class="items abandoned list-group">
-					</ul>
-					<div class="text-muted" style="display: none">Nothing found here.</div>
-				</div>
-			</div>
+			<ul class="items list-group">
+			</ul>
 		</div>
 
 		<!-- Optional JavaScript -->
@@ -71,29 +50,35 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.1/moment.min.js"></script>
 		<script src="../../img-fadein.js"></script>
 		<script>
 		jQuery(document).ready(function($) {
 			// Load items
-			$.getJSON('anime.json', function(data) {
+			$.getJSON('countdown.json', function(data) {
+				today = moment();
+				var diffText, diff;
 				$('.items').html('');
 				data.reverse(); // Put most recent at top
-				var counts = {'in-progress':0, 'completed':0, 'abandoned':0};
-				var targets = {'in-progress':'.in-progress', 'completed':'.completed', 'abandoned':'.abandoned'};
-				var badges = {'in-progress':'badge-primary', 'completed':'badge-success', 'abandoned':'badge-danger'}
 				data.forEach(function(item, index) {
-					target = '.items' + targets[item.status];
-					counts[item.status]++;
-					$('<div class="list-group-item justify-content-between" />').html(item.title).append(
-						$('<span class="badge badge-pill"/>')
-							.addClass(badges[item.status])
-							.text(item.value + '/' + (item.max ? item.max : item.value))
-					).appendTo(target);
-				});
-				Object.keys(counts).forEach(function(item, index) {
-					if(counts[item] == 0) {
-						$(targets[item]).siblings('.text-muted').show();
+					diff = today.diff(moment(item.date), 'days'); // Difference in days
+					if(diff < 1 && diff > -1) { // present
+						diffText = 'Today';
+					}	else if(diff > 0) { // past
+						diffText = diff + ' day' + (diff > 1 ? 's' : '') + ' ago';
+					} else { // future
+						diffText = 'in ' + diff + ' day' + (diff > 1 ? 's' : '');
 					}
+					$('.items').append(
+						$('<li>').addClass('list-group-item')
+							.addClass('justify-content-between')
+							.append(
+								$('<h5>').text(item.title)
+							).append(
+								$('<small>').addClass('text-muted')
+									.text(diffText)
+							)
+					);
 				});
 			});
 		});
