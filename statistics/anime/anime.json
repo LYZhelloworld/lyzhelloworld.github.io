@@ -628,5 +628,11 @@
 		"value":12,
 		"max":12,
 		"status":"completed"
+	},
+	{
+		"title":"ブレンド・S",
+		"value":5,
+		"max":null,
+		"status":"in-progress"
 	}
 ]
