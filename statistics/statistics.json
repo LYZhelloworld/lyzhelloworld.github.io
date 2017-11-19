@@ -4,5 +4,11 @@
 		"link":"anime/",
 		"icon":"tasks",
 		"content":"Records for tracking anime episodes."
+	},
+	{
+		"title":"statistics/Countdown",
+		"link":"countdown/",
+		"icon":"timer-o",
+		"content":"Records for countdowns."
 	}
 ]
