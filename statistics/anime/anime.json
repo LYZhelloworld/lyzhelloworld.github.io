@@ -631,7 +631,19 @@
 	},
 	{
 		"title":"ブレンド・S",
-		"value":7,
+		"value":8,
+		"max":null,
+		"status":"in-progress"
+	},
+	{
+		"title":"少女終末旅行",
+		"value":2,
+		"max":null,
+		"status":"in-progress"
+	},
+	{
+		"title":"妹さえいればいい。",
+		"value":8,
 		"max":null,
 		"status":"in-progress"
 	}
