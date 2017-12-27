@@ -645,6 +645,12 @@
 		"title":"妹さえいればいい。",
 		"value":8,
 		"max":null,
+		"status":"abandoned"
+	},
+	{
+		"title":"宝石の国",
+		"value":4,
+		"max":null,
 		"status":"in-progress"
 	}
 ]
