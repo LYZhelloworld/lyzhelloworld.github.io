@@ -632,13 +632,13 @@
 	{
 		"title":"ブレンド・S",
 		"value":12,
-		"max":null,
+		"max":12,
 		"status":"completed"
 	},
 	{
 		"title":"少女終末旅行",
 		"value":12,
-		"max":null,
+		"max":12,
 		"status":"completed"
 	},
 	{
@@ -649,8 +649,14 @@
 	},
 	{
 		"title":"宝石の国",
-		"value":4,
-		"max":null,
-		"status":"in-progress"
+		"value":12,
+		"max":12,
+		"status":"completed"
+	},
+	{
+		"title":"ガブリールドロップアウト",
+		"value":12,
+		"max":12,
+		"status":"completed"
 	}
 ]
