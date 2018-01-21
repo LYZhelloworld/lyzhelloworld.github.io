@@ -589,7 +589,7 @@
 	},
 	{
 		"title":"Fate/Grand Order",
-		"value":1,
+		"value":2,
 		"max":null,
 		"status":"completed"
 	},
@@ -632,18 +632,30 @@
 	{
 		"title":"ブレンド・S",
 		"value":12,
-		"max":null,
+		"max":12,
 		"status":"completed"
 	},
 	{
 		"title":"少女終末旅行",
 		"value":12,
-		"max":null,
+		"max":12,
 		"status":"completed"
 	},
 	{
 		"title":"妹さえいればいい。",
 		"value":8,
+		"max":12,
+		"status":"abandoned"
+	},
+	{
+		"title":"小林さんちのメイドラゴン",
+		"value":10,
+		"max":12,
+		"status":"abandoned"
+	},
+	{
+		"title":"りゅうおうのおしごと! ",
+		"value":2,
 		"max":null,
 		"status":"in-progress"
 	}
