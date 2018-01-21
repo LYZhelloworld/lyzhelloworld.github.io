@@ -648,18 +648,6 @@
 		"status":"abandoned"
 	},
 	{
-		"title":"小林さんちのメイドラゴン",
-		"value":10,
-		"max":12,
-		"status":"abandoned"
-	},
-	{
-		"title":"りゅうおうのおしごと! ",
-		"value":2,
-		"max":null,
-		"status":"abandoned"
-	},
-	{
 		"title":"宝石の国",
 		"value":12,
 		"max":12,
@@ -670,5 +658,17 @@
 		"value":12,
 		"max":12,
 		"status":"completed"
+	},
+	{
+		"title":"小林さんちのメイドラゴン",
+		"value":10,
+		"max":12,
+		"status":"abandoned"
+	},
+	{
+		"title":"りゅうおうのおしごと! ",
+		"value":2,
+		"max":null,
+		"status":"abandoned"
 	}
 ]
