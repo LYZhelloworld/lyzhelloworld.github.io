@@ -667,8 +667,26 @@
 	},
 	{
 		"title":"りゅうおうのおしごと! ",
-		"value":5,
+		"value":7,
 		"max":null,
+		"status":"in-progress"
+	},
+	{
+		"title":"カードキャプターさくら　クリアカード編",
+		"value":7,
+		"max":null,
+		"status":"in-progress"
+	},
+	{
+		"title":"シトラス",
+		"value":6,
+		"max":null,
+		"status":"in-progress"
+	},
+	{
+		"title":"クズの本懐",
+		"value":4,
+		"max":12,
 		"status":"in-progress"
 	}
 ]
