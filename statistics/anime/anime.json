@@ -667,20 +667,20 @@
 	},
 	{
 		"title":"りゅうおうのおしごと! ",
-		"value":9,
-		"max":null,
+		"value":10,
+		"max":12,
 		"status":"in-progress"
 	},
 	{
 		"title":"カードキャプターさくら　クリアカード編",
 		"value":7,
-		"max":null,
+		"max":12,
 		"status":"in-progress"
 	},
 	{
 		"title":"シトラス",
 		"value":9,
-		"max":null,
+		"max":12,
 		"status":"in-progress"
 	},
 	{
