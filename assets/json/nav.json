@@ -2,5 +2,9 @@
 	{
 		"name":"Home",
 		"href":"/"
+	},
+	{
+		"name":"Repositories",
+		"href":"/repo"
 	}
 ]
