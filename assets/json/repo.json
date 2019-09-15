@@ -12,9 +12,9 @@
 		"language":["C#", "Go", "Python"]
 	},
 	{
-		"name":"lyzhelloworld.github.io",
-		"href":"https://github.com/LYZhelloworld/lyzhelloworld.github.io",
-		"description":"Website",
+		"name":"Website",
+		"href":"https://github.com/LYZhelloworld/Website",
+		"description":"Source code of this website",
 		"language":["HTML","CSS","JavaScript"]
 	},
 	{
