@@ -3,13 +3,13 @@
 		"name":"image-2-pdf",
 		"href":"https://github.com/LYZhelloworld/image-2-pdf",
 		"description":"Compile your images into PDF files.",
-		"language":["Python"]
+		"language":["Go", "Python"]
 	},
 	{
 		"name":"Hello-Old-Driver",
 		"href":"https://github.com/LYZhelloworld/Hello-Old-Driver",
 		"description":"A LLSS Reader",
-		"language":["C#", "Go", "Python"]
+		"language":["Go", "C#", "Python"]
 	},
 	{
 		"name":"Website",
