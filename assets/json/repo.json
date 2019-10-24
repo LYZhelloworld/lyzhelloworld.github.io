@@ -1,15 +1,15 @@
 [
 	{
-		"name":"image-2-pdf",
-		"href":"https://github.com/LYZhelloworld/image-2-pdf",
-		"description":"Compile your images into PDF files.",
-		"language":["Go", "Python"]
+		"name":"image-2-pdf-Go",
+		"href":"https://github.com/LYZhelloworld/image-2-pdf-Go",
+		"description":"Compile your images into PDF files. (Go implementation)",
+		"language":["Go"]
 	},
 	{
-		"name":"Hello-Old-Driver",
-		"href":"https://github.com/LYZhelloworld/Hello-Old-Driver",
-		"description":"A LLSS Reader",
-		"language":["Go", "C#", "Python"]
+		"name":"Hello-Old-Driver-Go",
+		"href":"https://github.com/LYZhelloworld/Hello-Old-Driver-Go",
+		"description":"A LLSS reader (Go implementation)",
+		"language":["Go"]
 	},
 	{
 		"name":"Website",
