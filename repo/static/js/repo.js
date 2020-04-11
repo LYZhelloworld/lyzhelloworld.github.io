@@ -1,4 +1,4 @@
-(function(document, window) {
+(function(document) {
   badgeClasses = [
     'badge-success',
     'badge-danger',
@@ -83,4 +83,4 @@
     }
     response.json().then(addRepo);
   })
-})(document, window);
+})(document);
