@@ -33,14 +33,7 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Template: Navbar -->
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="/repo/">Repositories<span class="sr-only">
-                (current)</span></a>
-          </li>
+        <ul class="navbar-nav mr-auto auto-nav">
         </ul>
         <!-- Template-end: Navbar -->
         <div>
@@ -56,149 +49,10 @@
     </div>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="image-2-pdf/">image-2-pdf</a></h2>
-            <p class="card-text">
-              Compile your images into PDF files.<br />
-              <span class="badge badge-pill">
-                Go
-              </span>
-            </p>
-            <a href="image-2-pdf/" class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="hello-old-driver/">Hello-Old-Driver</a></h2>
-            <p class="card-text">
-              A LLSS reader<br />
-              <span class="badge badge-pill">
-                Go
-              </span>
-            </p>
-            <a href="hello-old-driver/" class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="https://github.com/LYZhelloworld/lyzhelloworld.github.io" target="_blank"
-                rel="noreferrer noopener">Website</a></h2>
-            <p class="card-text">
-              Source code of this website<br />
-              <span class="badge badge-pill">
-                HTML
-              </span>
-              <span class="badge badge-pill">
-                CSS
-              </span>
-              <span class="badge badge-pill">
-                JavaScript
-              </span>
-            </p>
-            <a href="https://github.com/LYZhelloworld/lyzhelloworld.github.io" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="https://github.com/LYZhelloworld/Leetcode" target="_blank"
-                rel="noreferrer noopener">Leetcode</a></h2>
-            <p class="card-text">
-              This repository is for storing Leetcode submissions<br />
-              <span class="badge badge-pill">
-                Python
-              </span>
-              <span class="badge badge-pill">
-                Java
-              </span>
-              <span class="badge badge-pill">
-                C
-              </span>
-            </p>
-            <a href="https://github.com/LYZhelloworld/Leetcode" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="https://github.com/LYZhelloworld/FF14Composer" target="_blank"
-                rel="noreferrer noopener">FF14Composer</a></h2>
-            <p class="card-text">
-              A tool for practising music playing in FF14<br />
-              <span class="badge badge-pill">
-                Python
-              </span>
-            </p>
-            <a href="https://github.com/LYZhelloworld/FF14Composer" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-4 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h2 class="card-title"><a href="react-tic-tac-toe/" target="_blank"
-                rel="noreferrer noopener">React-Tic-Tac-Toe</a></h2>
-            <p class="card-text">
-              A Tic Tac Toe game based on React.js<br />
-              <span class="badge badge-pill">
-                HTML
-              </span>
-              <span class="badge badge-pill">
-                CSS
-              </span>
-              <span class="badge badge-pill">
-                JavaScript
-              </span>
-            </p>
-            <a href="react-tic-tac-toe/" target="_blank" rel="noreferrer noopener"
-              class="btn btn-outline-primary btn-sm">View</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
+    <div class="row auto-repo"></div>
   </div>
-  <script>
-    function init() {
-      document.querySelectorAll(".card-text").forEach(card => {
-        badgeClasses = [
-          'badge-success',
-          'badge-danger',
-          'badge-warning',
-          'badge-info',
-          'badge-light',
-          'badge-dark'
-        ];
-        let badges = card.querySelectorAll(".badge.badge-pill");
-        for (let i = 0; i < badges.length; i++) {
-          badges[i].classList.add(badgeClasses[i % badgeClasses.length]);
-        }
-      });
-    }
-
-    document.onreadystatechange = function () {
-      if (document.readyState === "interactive") {
-        init();
-      }
-    }
-  </script>
+  <script src="/static/js/nav.js"></script>
+  <script src="static/js/repo.js"></script>
 </body>
 
 </html>
